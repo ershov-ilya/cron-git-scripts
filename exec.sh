@@ -1,0 +1,1 @@
+php write-hashes.php
