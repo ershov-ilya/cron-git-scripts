@@ -14,7 +14,8 @@ ini_set("display_errors", 1);
 
 require('../Git.php/Git.php');
 
-$repo = Git::open('../hashes/');
+define('ABSPATH', '/var/www/ershov.ilya/data/www/ershov.pw/api/cron-git/hashes/.git');
+$repo = Git::open(ABSPATH);
 
 $repo->add('.');
 $repo->commit('Some commit message');
