@@ -14,7 +14,7 @@ ini_set("display_errors", 1);
 
 require('../Git.php/Git.php');
 
-$repo = Git::open('../hashes/.git');
+$repo = Git::open('../hashes/');
 
 $repo->add('.');
 $repo->commit('Some commit message');
