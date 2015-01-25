@@ -30,6 +30,7 @@ $name = substr($content,0,12);
 //$res= shell_exec("./pu.sh $name");
 //$res= shell_exec('cd ../hashes; git commit -am "'.$name.'" ; git push origin master');
 
+$res= shell_exec('./pu.sh "'.$name.'"');
 
 print $res."\n";
 
