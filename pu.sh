@@ -8,6 +8,19 @@ git config user.email
 sshagentstatus=$(ps -e | grep [s]sh-agent)
 echo $sshagentstatus
 
+#if [ -n "$sshagentstatus" ]; then
+#    echo "sshagentstatus is not empty"
+#fi
+#
+#if [ -z "$sshagentstatus" ]; then 
+#    echo "sshagentstatus is empty"
+#fi
+
+if [ -z "$sshagentstatus" ]; then 
+ssh-agent /bin/bash
+ssh-add ~/.ssh/nopass_id
+fi
+
 commitname=$(php write-hashes.php)
 echo $commitname
 
