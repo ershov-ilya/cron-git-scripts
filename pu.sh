@@ -17,6 +17,7 @@ echo $sshagentstatus
 #fi
 
 if [ -z "$sshagentstatus" ]; then 
+echo "ssh-agent is OFF, starting again..."
 ssh-agent /bin/bash
 ssh-add ~/.ssh/nopass_id
 fi
